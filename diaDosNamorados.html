@@ -5,16 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feliz Dia dos Namorados</title>
     <link rel="stylesheet" href="assets/style.css">
+    <style>
+        body {
+            background-color: #DB7093;
+        }
+        
+        .painel {
+            margin: auto;
+            background-color: white;
+            width: 500px;
+            height: 570px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        .foto {
+            border-radius: 20px;
+            margin: auto;
+        }
+        
+        #sim {
+            height: 40px;
+            width: 60px;
+            background-color: rgb(245, 208, 242);
+            border: 2px solid white;
+            border-radius: 10px;
+            color: rgb(61, 56, 56);
+            margin-left: -80px;
+        }
+        
+        #nao {
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: rgb(245, 208, 242);
+            border: 2px solid white;
+            border-radius: 10px;
+            color: rgb(61, 56, 56);
+            margin-left: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="painel">
         <h1>Feliz Dia dos Namorados</h1>
+        <img class="foto" src="spiderman.gif" alt="imagem do homem aranha fazendo um coração com o dedo indicador">
         <h2>Aceita Casar Comigo?</h2>
-            <button id="sim">Sim</button>
-            <button onmouseover="fuja()" id="nao">Não</button>
-        <img class="foto" src="assets/img/spiderman.gif" alt="imagem do homem aranha fazendo um coração com o dedo indicador">
-            
-
+        <a href="https://www.tiktok.com/@nww.edit/video/7245296292975496475?q=miles%20morales%20e%20gwen%20casal&t=1718156320846" target="_blank"><button id="sim" > Sim </button></a>
+            <button onmouseover="fuja()" id="nao"> Não </button>
     </div>
+
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+
+        }
+
+    </script>
 </body>
 </html>
