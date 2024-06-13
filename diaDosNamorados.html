@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feliz Dia dos Namorados</title>
-    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- Integrando CSS no HTML -->
     <style>
         body {
             background-color: #DB7093;
@@ -51,12 +52,15 @@
 <body>
     <div class="painel">
         <h1>Feliz Dia dos Namorados</h1>
-        <img class="foto" src="spiderman.gif" alt="imagem do homem aranha fazendo um coração com o dedo indicador">
+        <!-- Imagem -->
+        <img class="foto" src="spiderman.gif" alt="imagem do homem aranha fazendo um coração com o dedo indicador">      
         <h2>Aceita Casar Comigo?</h2>
+
+        <!-- link integrado com a palavra SIM direcionando para o tiktok -->
         <a href="https://www.tiktok.com/@nww.edit/video/7245296292975496475?q=miles%20morales%20e%20gwen%20casal&t=1718156320846" target="_blank"><button id="sim" > Sim </button></a>
             <button onmouseover="fuja()" id="nao"> Não </button>
     </div>
-
+        <!-- Código do JavaScript integrado no HTML -->
     <script>
         function fuja(){
             var botaoNao = document.getElementById("nao")
